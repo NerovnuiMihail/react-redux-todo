@@ -13,16 +13,15 @@ const ToDoPage = () => {
     return (
         <>
             {visible && <Modal />}
-            {true &&         
-                    <div className="todo_page">
-                        <h1>TODO list</h1>
-                        <TodoTable />
-                        <div className="todo_page_content">
-                            <ToDoUp />
-                            <ToDoDown />
-                        </div>
-                    </div>
-            }
+        
+            <div className="todo_page">
+                <h1>TODO list</h1>
+                <TodoTable />
+                <div className="todo_page_content">
+                    <ToDoUp />
+                    <ToDoDown />
+                </div>
+            </div>
         </>
     );
 };

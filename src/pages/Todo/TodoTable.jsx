@@ -24,9 +24,8 @@ const TodoTable = () => {
 
     const CreateToDos = () => {
         if(title && text) {
-            dispatch({type: "CREATE_TODO", payload: {id: Date.now(), title, text, ready: false}})
+            dispatch({type: "CREATE_TODO", payload: {id: Date.now(), title, text}})
             dispatch({type: "RESET"})
-            dispatch({type: "DONT_SHOW_MODAL"})
         } else {
             dispatch({type: "SHOW_MODAl"})
         }
@@ -34,7 +33,7 @@ const TodoTable = () => {
 
     return (
         <div className="todo_table">
-            <Input type="text" value={title} onChange={handleChangeTitle} placeholder="Тема задачи.." />
+            <Input value={title} onChange={handleChangeTitle} placeholder="Тема задачи.." />
             <textarea placeholder="Описание задачи.." onChange={handleChangeText} value={text} />
             <Button text="Добавить" onClick={CreateToDos} />
         </div>

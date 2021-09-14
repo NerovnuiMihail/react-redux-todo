@@ -1,22 +1,23 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
+import { Route, Switch } from "react-router-dom";
+
 import Home from "../pages/Home/Home";
+import PageNotFound from '../pages/PageNotFound';
 import ToDoPage from "../pages/Todo/ToDoPage";
 
 const RouterApp = () => {
     return (
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path="/todos">
-                    <ToDoPage />
-                </Route>
-            </Switch>
-        </Router>
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route exact path="/todos">
+                <ToDoPage />
+            </Route>
+            <Route path="*">
+                <PageNotFound />
+            </Route>
+        </Switch>
     );
 };
 

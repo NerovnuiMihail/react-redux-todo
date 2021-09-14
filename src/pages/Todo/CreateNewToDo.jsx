@@ -13,7 +13,7 @@ const CreateNewToDo = () => {
     };
 
     const handleChangeToDoList = (e) => {
-        const data = +e.target.dataset.ready;
+        const data = +e.target.dataset.name;
         dispatch({type: "CHANGE_TODO", payload: data})
         dispatch({type: "DELETE_TODO", payload: data})
     };
@@ -30,7 +30,7 @@ const CreateNewToDo = () => {
                                 <div className="new_todos_btn">
                                     <Button text="Редактировать" className="todo_btn_edit" />
                                     <Button text="Удалить" className="todo_btn_delete" onClick={handleDeleteToDo} data-name={arrToDo.id} />
-                                    <Button text="Завершить" className="todo_btn_complite" onClick={handleChangeToDoList} data-ready={arrToDo.id} />
+                                    <Button text="Завершить" className="todo_btn_complite" onClick={handleChangeToDoList} data-name={arrToDo.id} />
                                 </div>
                             </div>
                         );

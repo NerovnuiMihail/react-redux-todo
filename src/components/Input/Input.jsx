@@ -18,7 +18,7 @@ const Input = ({type, placeholder, value, className, onChange }) => {
 export default Input;
 
 Input.propTypes = {
-    type: PropTypes.string.isRequired,
+    type: PropTypes.string,
     placeholder: PropTypes.string,
     value: PropTypes.string,
     className: PropTypes.string,
@@ -27,4 +27,6 @@ Input.propTypes = {
 
 Input.defaultProps = {
     className: 'my_input',
+    type: 'text',
+    placeholder: '...'
 }
