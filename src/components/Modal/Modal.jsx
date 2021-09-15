@@ -1,18 +1,8 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
-
 import Button from '../Button/Button';
-
 import './style.css';
 
-const Modal = () => {
-
-    const dispatch = useDispatch();
-
-    const handleClose = () => {
-        dispatch({type: "CLOSE_MODAL"})
-    };
-
+const Modal = ({handleClose}) => {
     return (
         <div className="modal-conteiner">
             <div className="modal-content">

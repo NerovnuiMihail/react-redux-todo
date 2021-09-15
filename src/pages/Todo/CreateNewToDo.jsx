@@ -1,23 +1,7 @@
 import React from 'react';
-import {useSelector, useDispatch} from "react-redux";
 import Button from '../../components/Button/Button';
 
-const CreateNewToDo = () => {
-
-    const dispatch = useDispatch();
-    const arrToDos = useSelector(state => state.todoReducer.arrToDo);
-
-    const handleDeleteToDo = (e) => {
-        const data = +e.target.dataset.name;
-        dispatch({type: "DELETE_TODO", payload: data})
-    };
-
-    const handleChangeToDoList = (e) => {
-        const data = +e.target.dataset.name;
-        dispatch({type: "CHANGE_TODO", payload: data})
-        dispatch({type: "DELETE_TODO", payload: data})
-    };
-
+const CreateNewToDo = ({arrToDos, handleDeleteToDo, handleChangeToDoList}) => {
     return (
         <>
             { arrToDos.length === 0 && <div><h2>Задачи не найдены</h2></div> }

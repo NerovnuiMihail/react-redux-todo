@@ -1,12 +1,14 @@
 import React from 'react';
 import ChangeToDoList from '../ChangeToDoList';
-
 import '../style.css';
 
-const ToDoDown = () => {
+const ToDoDown = ({changeToDo, handleChangeDeleteToDo}) => {
     return (
         <div className="todo_down">
-            <ChangeToDoList />
+            <ChangeToDoList 
+                changeToDo={changeToDo}
+                handleChangeDeleteToDo={handleChangeDeleteToDo}
+            />
         </div>
     );
 };
