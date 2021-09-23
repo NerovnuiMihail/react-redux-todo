@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './style.css';
+import styles from './Input.module.css';
 
-const Input = ({type, placeholder, value, className, onChange }) => {
+const Input = ({type, placeholder, value, className = styles.custom_input, onChange }) => {
     return (
         <input
             className={className}
@@ -14,8 +14,6 @@ const Input = ({type, placeholder, value, className, onChange }) => {
         />
     );
 };
-
-export default Input;
 
 Input.propTypes = {
     type: PropTypes.string,
@@ -30,3 +28,5 @@ Input.defaultProps = {
     type: 'text',
     placeholder: '...'
 }
+
+export default Input;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/Button/Button';
+import Button from '../../../moduls/Button/Button';
 
 const CreateNewToDo = ({arrToDos, handleDeleteToDo, handleChangeToDoList}) => {
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import './style.css';
+import styles from './Button.module.css';
 
-const Button = ({text, className, type, onClick, ...props}) => {
+const Button = ({text, className = styles.custom_btn, type, onClick, ...props}) => {
     return (
         <button
             className={className}
@@ -16,8 +16,6 @@ const Button = ({text, className, type, onClick, ...props}) => {
     );
 };
 
-export default Button;
-
 Button.propTypes = {
     text: PropTypes.string,
     className: PropTypes.string,
@@ -26,7 +24,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-    className: 'my-btn',
-    text: 'Отправить',
-    onClick: () => {}
+    text: 'Отправить'
 }
+
+export default Button;

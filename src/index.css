@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+#root {}
+
+/*body {*/
+/*    background-image: linear-gradient(to right bottom, #004af2, #007aff, #009dff, #00b9f5, #46d2e7);*/
+/*}*/

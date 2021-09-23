@@ -1,10 +1,12 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import TodoTable from "./TodoTable";
-import ToDoUp from "./content/ToDoUP";
-import ToDoDown from "./content/ToDoDown";
+import TodoTable from "./contentCreators/TodoTable";
 import Modal from '../../components/Modal/Modal';
+import ChangeToDoList from "./contentCreators/ChangeToDoList";
+import CreateNewToDo from "./contentCreators/CreateNewToDo";
+
+import styles from "./Todo.module.css";
 
 const ToDoPage = () => {
     
@@ -56,8 +58,10 @@ const ToDoPage = () => {
         <>
             {visible && <Modal handleClose={handleClose} />}
         
-            <div className="todo_page">
-                <h1>TODO list</h1>
+            <div className={styles}>
+
+                <h1>НОВАЯ ЗАДАЧА</h1>
+
                 <TodoTable 
                     title={title}
                     text={text}
@@ -65,16 +69,22 @@ const ToDoPage = () => {
                     handleChangeText={handleChangeText}
                     CreateToDos={CreateToDos}
                 />
-                <div className="todo_page_content">
-                    <ToDoUp 
-                        arrToDos={arrToDos}
-                        handleDeleteToDo={handleDeleteToDo}
-                        handleChangeToDoList={handleChangeToDoList}
-                    />
-                    <ToDoDown 
-                        changeToDo={changeToDo}
-                        handleChangeDeleteToDo={handleChangeDeleteToDo}
-                    />
+
+                <div className={styles}>
+                    <div className={styles}>
+                        <CreateNewToDo
+                            arrToDos={arrToDos}
+                            handleDeleteToDo={handleDeleteToDo}
+                            handleChangeToDoList={handleChangeToDoList}
+                        />
+                    </div>
+
+                    <div className={styles}>
+                        <ChangeToDoList
+                            changeToDo={changeToDo}
+                            handleChangeDeleteToDo={handleChangeDeleteToDo}
+                        />
+                    </div>
                 </div>
             </div>
         </>

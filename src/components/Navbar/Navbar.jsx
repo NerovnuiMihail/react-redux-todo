@@ -1,17 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
-import './style.css';
+import styles from  './Navbar.module.css';
 
 const Navbar = () => {
     return (
-        <nav>
-            <ul className="nav justify-content-center">
-                <li className="nav-item">
-                    <Link to="/">Home</Link>
+        <nav className={styles.navbar_container}>
+            <ul className={styles.navbar_content}>
+                <li className={styles.navbar_content__item}>
+                    <NavLink className={styles.navbar_content__link} to="/">Home</NavLink>
                 </li>
-                <li className="nav-item">
-                    <Link to="/todos">Todos</Link>
+                <li className={styles.navbar_content__item}>
+                    <NavLink className={styles.navbar_content__link} to="/todos">Todos</NavLink>
                 </li>
             </ul>
         </nav>
