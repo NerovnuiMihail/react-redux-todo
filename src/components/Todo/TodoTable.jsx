@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 import Input from "../../moduls/Input/Input";
 import Button from "../../moduls/Button/Button";
 
@@ -28,5 +30,14 @@ const TodoTable = ({title, text, handleChangeTitle, handleChangeText, CreateToDo
         </div>
     );
 };
+
+TodoTable.propTypes = {
+    title: PropTypes.string,
+    text: PropTypes.string,
+    handleChangeTitle: PropTypes.func,
+    handleChangeText: PropTypes.func,
+    CreateToDos: PropTypes.func,
+    className: PropTypes.string
+}
 
 export default TodoTable;

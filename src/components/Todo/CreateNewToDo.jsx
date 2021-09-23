@@ -32,7 +32,10 @@ const CreateNewToDo = ({arrToDos, handleDeleteToDo, handleChangeToDoList, classN
 };
 
 CreateNewToDo.propTypes = {
-
+    arrToDos: PropTypes.array,
+    handleDeleteToDo: PropTypes.func,
+    handleChangeToDoList: PropTypes.func,
+    className: PropTypes.string
 }
 
 export default CreateNewToDo;

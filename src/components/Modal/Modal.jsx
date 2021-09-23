@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 import Button from '../../moduls/Button/Button';
 
 import styles from './Modal.module.css';
@@ -13,5 +15,9 @@ const Modal = ({handleClose}) => {
         </div>
     );
 };
+
+Modal.propTypes = {
+    handleClose: PropTypes.func
+}
 
 export default Modal;

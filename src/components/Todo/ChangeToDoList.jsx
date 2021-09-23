@@ -16,9 +16,9 @@ const ChangeToDoList = ({changeToDo, handleChangeDeleteToDo, className}) => {
             {changeToDo && changeToDo.map(ToDo => {
                     return (
                         <div key={ToDo.id} className={styles.wrapper}>
-                            <Input className={classNames(styles.table_input, styles.wrapper_input)} value={ToDo.title} disabled/>
-                            <textarea className={classNames(styles.table_textarea, styles.wrapper_textarea)} value={ToDo.text} disabled />
-                            <Button text="Удалить" onClick={handleChangeDeleteToDo} className={classNames(styles.table_btn)} data-id={ToDo.id} />
+                            <Input className={classNames(styles.table_input, styles.wrapper_input, className)} value={ToDo.title} disabled/>
+                            <textarea className={classNames(styles.table_textarea, styles.wrapper_textarea, className)} value={ToDo.text} disabled />
+                            <Button text="Удалить" onClick={handleChangeDeleteToDo} className={classNames(styles.table_btn, className)} data-id={ToDo.id} />
                         </div>
                     );
                 }) 
@@ -28,7 +28,9 @@ const ChangeToDoList = ({changeToDo, handleChangeDeleteToDo, className}) => {
 };
 
 ChangeToDoList.propTypes = {
-
+    changeToDo: PropTypes.array,
+    handleChangeDeleteToDo: PropTypes.func,
+    className: PropTypes.string
 }
 
 export default ChangeToDoList;

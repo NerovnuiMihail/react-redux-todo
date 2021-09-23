@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 import TodoTable from "../../components/Todo/TodoTable";
@@ -9,11 +9,12 @@ import CreateNewToDo from "../../components/Todo/CreateNewToDo";
 import styles from "./Todo.module.css";
 
 const ToDoPage = () => {
+    const [title, setTitle] = useState('');
+    const [text, setText] = useState('');
     
     const dispatch = useDispatch();
+
     const visible = useSelector(state => state.modalReducer.visible);
-    const title = useSelector( state => state.todoReducer.title);
-    const text = useSelector(state => state.todoReducer.text);
     const arrToDos = useSelector(state => state.todoReducer.arrToDo);
     const changeToDo = useSelector(state => state.todoReducer.changeToDo);
 
@@ -22,17 +23,18 @@ const ToDoPage = () => {
     };
 
     const handleChangeTitle = ({target:{value}}) => {
-        dispatch({type: "CREATE_TITLE", payload: value})
+        setTitle(value);
     };
 
     const handleChangeText = ({target:{value}}) => {
-        dispatch({type: "CREATE_TEXT", payload: value})
+        setText(value);
     };
 
     const CreateToDos = () => {
         if(title && text) {
-            dispatch({type: "CREATE_TODO", payload: {id: Date.now(), title, text}})
-            dispatch({type: "RESET"})
+            dispatch({type: "CREATE_TODO", payload: {id: Date.now(), title, text}});
+            setTitle('');
+            setText('');
         } else {
             dispatch({type: "SHOW_MODAl"})
         }
