@@ -1,11 +1,18 @@
+:root {
+    --color-main: #000;
+
+    --box-shadow-main: 5px 8px 10px 4px #0077ff
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#root {}
-
-/*body {*/
-/*    background-image: linear-gradient(to right bottom, #004af2, #007aff, #009dff, #00b9f5, #46d2e7);*/
-/*}*/
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, #00fde7, #00d7ff, #00abff, #0077ff, #5122d6);
+    background-size: cover;
+    background-attachment: fixed;
+}

@@ -1,0 +1,72 @@
+.container {
+    min-width: 100%;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    background-image: linear-gradient(to right top, #5bff7e, #58ff92, #59fea4, #5efdb3, #68fbc1);
+    object-position: center center;
+    object-fit: contain;
+}
+
+.whitout_todo {
+    padding: 10px;
+    border: 2px solid #0077ff;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-main);
+}
+
+.table_input {
+    height: 30px;
+    border-radius: 7px;
+    border: inherit;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+}
+
+.table_textarea {
+    border-radius: 7px;
+    border: inherit;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.table_btn {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.wrapper {
+    min-width: 600px;
+    min-height: 120px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+    background-image: linear-gradient(to bottom, #4f98f8, #3d9cf5, #2b9ff0, #1ba2eb, #0fa4e5);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-main);
+}
+
+.wrapper_input {
+    min-width: 450px;
+}
+
+.wrapper_textarea {
+    min-width: 450px;
+}
+
+.wrapper__btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

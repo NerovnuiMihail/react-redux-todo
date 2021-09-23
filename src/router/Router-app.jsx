@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
-import Home from "../pages/Home/Home";
-import PageNotFound from '../pages/PageNotFound';
-import ToDoPage from "../pages/Todo/ToDoPage";
+import Home from "../containers/Home/Home";
+import PageNotFound from '../containers/PageNotFound';
+import ToDoPage from "../containers/Todo/ToDoPage";
 
 const RouterApp = () => {
     return (

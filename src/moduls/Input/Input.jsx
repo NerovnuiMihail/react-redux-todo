@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Input.module.css';
 
-const Input = ({type, placeholder, value, className = styles.custom_input, onChange }) => {
+const Input = ({type, placeholder, value, className = styles.custom_input, onChange, disabled }) => {
     return (
         <input
             className={className}
@@ -11,6 +11,7 @@ const Input = ({type, placeholder, value, className = styles.custom_input, onCha
             placeholder={placeholder}
             value={value}
             onChange={onChange}
+            disabled={disabled}
         />
     );
 };

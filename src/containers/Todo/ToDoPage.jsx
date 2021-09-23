@@ -1,10 +1,10 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import TodoTable from "./contentCreators/TodoTable";
+import TodoTable from "../../components/Todo/TodoTable";
 import Modal from '../../components/Modal/Modal';
-import ChangeToDoList from "./contentCreators/ChangeToDoList";
-import CreateNewToDo from "./contentCreators/CreateNewToDo";
+import ChangeToDoList from "../../components/Todo/ChangeToDoList";
+import CreateNewToDo from "../../components/Todo/CreateNewToDo";
 
 import styles from "./Todo.module.css";
 
@@ -58,20 +58,23 @@ const ToDoPage = () => {
         <>
             {visible && <Modal handleClose={handleClose} />}
         
-            <div className={styles}>
+            <div className={styles.container}>
 
-                <h1>НОВАЯ ЗАДАЧА</h1>
+                <h1 className={styles.container__title}>НОВАЯ ЗАДАЧА</h1>
 
-                <TodoTable 
-                    title={title}
-                    text={text}
-                    handleChangeTitle={handleChangeTitle} 
-                    handleChangeText={handleChangeText}
-                    CreateToDos={CreateToDos}
-                />
+                <div className={styles.container__table}>
+                    <TodoTable
+                        title={title}
+                        text={text}
+                        handleChangeTitle={handleChangeTitle}
+                        handleChangeText={handleChangeText}
+                        CreateToDos={CreateToDos}
+                    />
+                </div>
 
-                <div className={styles}>
-                    <div className={styles}>
+
+                <div className={styles.wrapper}>
+                    <div className={styles.container__newtodo}>
                         <CreateNewToDo
                             arrToDos={arrToDos}
                             handleDeleteToDo={handleDeleteToDo}
@@ -79,7 +82,7 @@ const ToDoPage = () => {
                         />
                     </div>
 
-                    <div className={styles}>
+                    <div className={styles.container__changetodo}>
                         <ChangeToDoList
                             changeToDo={changeToDo}
                             handleChangeDeleteToDo={handleChangeDeleteToDo}
