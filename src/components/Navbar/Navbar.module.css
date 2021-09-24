@@ -17,9 +17,15 @@
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
     border: 1px solid var(--color-main);
+    /*border: 1px solid inherit;*/
     border-radius: 8px;
     background-image: linear-gradient(to bottom, #93f200, #8adb05, #80c50a, #76b00e, #6b9b11);
+}
+
+.navbar_content__item a.active {
+    color: orangered;
 }
 
 .navbar_content__link {
