@@ -1,0 +1,39 @@
+.postitem_wrapper {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1ba2eb;
+}
+
+.wrapper_title {
+    margin: 15px auto 10px auto;
+}
+
+.wrapper_number {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.wrapper_name {
+    text-transform: uppercase;
+    text-decoration: underline red;
+    font-weight: bold;
+}
+
+.wrapper_text {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.post {
+    margin: 10px;
+    padding: 5px;
+    width: 500px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #28d528;
+}

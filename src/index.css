@@ -12,7 +12,7 @@
 
 body {
     height: 100vh;
-    background-image: linear-gradient(to top, #00fde7, #00d7ff, #00abff, #0077ff, #5122d6);
-    background-size: cover;
-    background-attachment: fixed;
+    /*background-image: linear-gradient(to top, #00fde7, #00d7ff, #00abff, #0077ff, #5122d6);*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
 }

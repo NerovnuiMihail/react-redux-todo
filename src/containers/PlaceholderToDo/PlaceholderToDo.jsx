@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 
-import {INITIAL_URL, USER_ID_URL} from "../../api/constants";
+import {BASE_URL, TODOS_URL, USER_ID_URL} from "../../api/constants";
 import PlaceholderToDoItem from "../../components/PlaceholderToDo/PlaceholderToDoItem";
 import Pagination from "../../components/Pagination/Pagination";
 
@@ -14,7 +14,7 @@ const PlaceholderToDo = props => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        axios.get(INITIAL_URL+USER_ID_URL+page)
+        axios.get(BASE_URL + TODOS_URL + USER_ID_URL + page)
             .then(res => setData(res.data))
     }, [page]);
 

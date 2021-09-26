@@ -17,6 +17,17 @@
     color: #b9071b;
 }
 
+.wrapper_inside {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_inside img {
+    margin-left: 10px;
+}
+
 .wrapper__area {
     min-width: 300px;
     min-height: 20px;
