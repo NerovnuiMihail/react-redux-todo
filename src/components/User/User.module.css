@@ -1,0 +1,19 @@
+.wrapper {
+    width: 220px;
+    height: 180px;
+    /*margin: 10px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #6b9b11;
+}
+
+.wrapper_name {}
+
+.wrapper_username {}
+
+.wrapper_email {}
+
+.wrapper_phone {}
+
+.wrapper_company {}

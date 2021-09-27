@@ -8,6 +8,7 @@ const CommentItem = ({name, email, body}) => {
         <div className={styles.wrapper_comment}>
             <div className={styles.wrapper_title}>
                 <span className={styles.comment_email}>{email}</span>
+                <span>:</span>
                 <span className={styles.comment_title}>{name}</span>
             </div>
             <p className={styles.comment_body}>{body}</p>

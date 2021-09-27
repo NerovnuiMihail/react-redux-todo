@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from "react-router-dom";
+import PropTypes from 'prop-types';
 import axios from "axios";
-// import PropTypes from 'prop-types';
 
 import {BASE_URL, POST_ID_URL, ID_URL, POSTS_URL, COMMENTS_URL} from "../../api/constants";
 import PostItem from "../../components/PostItem/PostItem";
 import CommentItem from "../../components/CommentItem/CommentItem";
-import PropTypes from "prop-types";
 
 import styles from "./Posts.module.css";
 
@@ -18,6 +17,10 @@ const Posts = ({match}) => {
 
     const idPage = match.params.id;
 
+    const handleGoBack = () => {
+        goBack.goBack();
+    };
+
     useEffect(() => {
         axios.get(BASE_URL + POSTS_URL + ID_URL + idPage)
             .then(res => setPostItem(res.data))
@@ -27,13 +30,6 @@ const Posts = ({match}) => {
         axios.get(BASE_URL + COMMENTS_URL + POST_ID_URL + idPage)
             .then(res => setCommentItem(res.data))
     }, [idPage]);
-
-    console.log(commentItem)
-    console.log(postItem)
-
-    const handleGoBack = () => {
-        goBack.goBack();
-    }
 
     return (
         <div className={styles.post_wrapper}>
@@ -47,6 +43,9 @@ const Posts = ({match}) => {
                     body={body}
                 />)
             )}
+
+            <h2>Comments:</h2>
+
             {commentItem && commentItem.map(({id, email, name, body}) => (
                 <CommentItem
                     key={id}

@@ -18,8 +18,8 @@ const PostItem = ({id, title, body, className}) => {
                 )
                 : (
                     <div className={styles.post}>
-                        <h3>Post № {id}</h3>
-                        <h2>{title}</h2>
+                        <span className={styles.post_number}>Post № {id}</span>
+                        <span className={styles.post_title}>{title}</span>
                     </div>
                 )
             }

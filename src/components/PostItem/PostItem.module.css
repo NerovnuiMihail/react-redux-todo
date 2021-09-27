@@ -1,8 +1,10 @@
 .postitem_wrapper {
-    height: 150px;
+    min-height: 120px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     border: 1px solid #1ba2eb;
+    border-radius: 15px;
 }
 
 .wrapper_title {
@@ -29,11 +31,22 @@
 .post {
     margin: 10px;
     padding: 5px;
-    width: 500px;
+    width: 220px;
     height: 120px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     border: 2px solid #28d528;
+}
+
+.post_number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.post_title {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
 }
