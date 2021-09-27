@@ -18,7 +18,9 @@ const ChangeToDoList = ({changeToDo, handleChangeDeleteToDo, className}) => {
                         <div key={ToDo.id} className={styles.wrapper}>
                             <Input className={classNames(styles.table_input, styles.wrapper_input, className)} value={ToDo.title} disabled/>
                             <textarea className={classNames(styles.table_textarea, styles.wrapper_textarea, className)} value={ToDo.text} disabled />
-                            <Button text="Удалить" onClick={handleChangeDeleteToDo} className={classNames(styles.table_btn, className)} data-id={ToDo.id} />
+                            <div className={styles.wrapper__btns }>
+                                <Button text="Удалить" onClick={handleChangeDeleteToDo} className={styles.delete_btn} data-id={ToDo.id} />
+                            </div>
                         </div>
                     );
                 }) 

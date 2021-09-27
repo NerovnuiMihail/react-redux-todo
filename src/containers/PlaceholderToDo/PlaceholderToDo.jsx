@@ -46,8 +46,6 @@ const PlaceholderToDo = props => {
 
             <Pagination
                 wrapperName={styles.wrapper__btns}
-                buttonDown={styles.btn}
-                buttonUp={styles.btn}
                 counterName={styles.pagecount}
                 page={page}
                 onClickDown={HandleDownPage}
@@ -86,8 +84,6 @@ const PlaceholderToDo = props => {
 
             <Pagination
                 wrapperName={styles.wrapper__btns}
-                buttonDown={styles.btn}
-                buttonUp={styles.btn}
                 counterName={styles.pagecount}
                 page={page}
                 onClickDown={HandleDownPage}

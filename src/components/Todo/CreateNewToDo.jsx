@@ -9,19 +9,20 @@ import styles from './Todo.module.css';
 
 
 const CreateNewToDo = ({arrToDos, handleDeleteToDo, handleChangeToDoList, className}) => {
+    console.log(className)
     return (
         <>
-            { arrToDos.length === 0 && <div className={styles.whitout_todo}><h2>Задачи не найдены</h2></div> }
+            { arrToDos.length === 0 && <div className={styles.whitout_todo}><h2>Задачи не созданы</h2></div> }
 
             { arrToDos && arrToDos.map(arrToDo => {
                         return ( 
-                            <div key={arrToDo.id} className={styles.wrapper}>
+                            <div key={arrToDo.id} className={classNames(styles.wrapper, className)}>
                                 <Input className={classNames(styles.table_input, styles.wrapper_input)} value={arrToDo.title} disabled/>
                                 <textarea className={classNames(styles.table_textarea, styles.wrapper_textarea)} value={arrToDo.text} disabled />
                                 <div className={styles.wrapper__btns}>
-                                    <Button text="Редактировать" className={classNames(styles.table_btn)} />
-                                    <Button text="Удалить" className={classNames(styles.table_btn)} onClick={handleDeleteToDo} data-name={arrToDo.id} />
-                                    <Button text="Завершить" className={classNames(styles.table_btn)} onClick={handleChangeToDoList} data-name={arrToDo.id} />
+                                    <Button text="Редактировать" className={styles.edit_btn} />
+                                    <Button text="Удалить" className={styles.delete_btn} onClick={handleDeleteToDo} data-name={arrToDo.id} />
+                                    <Button text="Завершить" className={styles.gacha_btn} onClick={handleChangeToDoList} data-name={arrToDo.id} />
                                 </div>
                             </div>
                         );

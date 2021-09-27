@@ -1,50 +1,39 @@
 .container {
     min-width: 100%;
     min-height: 160px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    border-radius: 7px;
-    background-image: linear-gradient(to right top, #5bff7e, #58ff92, #59fea4, #5efdb3, #68fbc1);
-    object-position: center center;
-    object-fit: contain;
+    border-radius: var(--border-radius-big);
+    box-shadow: 1px 1px 8px 1px #5BFF7EFF;
 }
 
 .whitout_todo {
+    min-width: 230px;
     padding: 10px;
-    border: 2px solid #0077ff;
-    border-radius: 8px;
+    border-radius: var(--border-radius-big);
     box-shadow: var(--box-shadow-main);
 }
 
 .table_input {
     height: 30px;
-    border-radius: 7px;
-    border: inherit;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--color-gray);
     text-align: center;
     margin: 10px 10px 0 10px;
     padding: 10px;
 }
 
 .table_textarea {
-    border-radius: 7px;
-    border: inherit;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--color-gray);
     text-align: center;
     margin: 10px;
     padding: 10px;
 }
 
-.table_btn {
-    cursor: pointer;
-    width: 100px;
-    height: 30px;
-    margin: 5px auto;
-    padding: 5px;
-    border-radius: 10px;
-    border: none;
-}
-
 .wrapper {
-    min-width: 600px;
+    min-width: 500px;
     min-height: 120px;
     margin-bottom: 15px;
     display: flex;
@@ -52,21 +41,40 @@
     justify-content: space-around;
     align-items: center;
     overflow: auto;
-    background-image: linear-gradient(to bottom, #4f98f8, #3d9cf5, #2b9ff0, #1ba2eb, #0fa4e5);
-    border-radius: 12px;
+    border-radius: var(--border-radius-big);
     box-shadow: var(--box-shadow-main);
 }
 
 .wrapper_input {
-    min-width: 450px;
+    min-width: 75%;
+    background-color: var(--color-light-main);
 }
 
 .wrapper_textarea {
-    min-width: 450px;
+    min-width: 75%;
+    background-color: var(--color-light-main);
 }
 
 .wrapper__btns {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+
+.edit_btn {
+    border: 2px solid #faad60;
+    color: #faad60;
+}
+.delete_btn {
+    border: 2px solid #a2001a;
+    color: #a2001a;
+}
+.gacha_btn {
+    border: 2px solid #28d528;
+    color: #28d528;
+}
+.table_btn {
+    width: 20%;
+    margin: auto;
 }

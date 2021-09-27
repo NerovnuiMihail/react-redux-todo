@@ -1,7 +1,13 @@
 :root {
-    --color-main: #000;
+    --color-gray: #d3d1d1;
+    --color-main: #4339f3;
+    --color-light-main: #dfdff5;
 
-    --box-shadow-main: 5px 8px 10px 4px #0077ff
+    --border-radius-small: 3px;
+    --border-radius-medium: 5px;
+    --border-radius-big: 8px;
+
+    --box-shadow-main: 1px 1px 8px 1px #0077ff
 }
 
 * {
@@ -11,8 +17,10 @@
 }
 
 body {
-    height: 100vh;
-    /*background-image: linear-gradient(to top, #00fde7, #00d7ff, #00abff, #0077ff, #5122d6);*/
-    /*background-size: cover;*/
-    /*background-attachment: fixed;*/
+    height: 100%;
+    width: 100%;
+}
+
+.top_wrapper_app {
+
 }

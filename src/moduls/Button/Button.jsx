@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import styles from './Button.module.css';
 
-const Button = ({text, className = styles.custom_btn, type, onClick, ...props}) => {
+const Button = ({text, className, type, onClick, ...props}) => {
     return (
         <button
-            className={className}
+            className={classNames(styles.custom_btn, className)}
             type={type}
             onClick={onClick}
             {...props}

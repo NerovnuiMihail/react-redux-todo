@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from "classnames";
 
 import complitedIcon from './img/happy.png';
 import NotComplitedIcon from './img/thinking.png';
@@ -7,24 +8,24 @@ import NotComplitedIcon from './img/thinking.png';
 import styles from "./PlaceholderToDoItem.module.css";
 
 
-const PlaceholderToDoItem = ({id, value, completed}) => {
+const PlaceholderToDoItem = ({id, value, completed, classNameWrapper}) => {
     return (
         <>
             {completed ? (
-                <div className={styles.wrapper}>
-                    <h2>Задача №{id}</h2>
+                <div className={classNames(styles.wrapper, classNameWrapper)}>
+                    <span className={styles.number}>Задача №{id}</span>
                     <p className={styles.wrapper__area}>{value}</p>
                     <div className={styles.wrapper_inside}>
-                        <h6>Задача еще не завершена</h6>
+                        <span className={styles.cheked}>Задача еще не завершена</span>
                         <img src={NotComplitedIcon} alt="NotComplitedIcon"/>
                     </div>
                 </div>)
                 :
                 (<div className={styles.wrapper}>
-                    <h2>Задача №{id}</h2>
+                    <span className={styles.number}>Задача №{id}</span>
                     <p className={styles.wrapper__area}>{value}</p>
                     <div className={styles.wrapper_inside}>
-                        <h6>Задача завершена</h6>
+                        <span className={styles.cheked}>Задача завершена</span>
                         <img src={complitedIcon} alt="complitedIcon"/>
                     </div>
                 </div>)
@@ -36,7 +37,7 @@ const PlaceholderToDoItem = ({id, value, completed}) => {
 PlaceholderToDoItem.propTypes = {
     id: PropTypes.number,
     value: PropTypes.string,
-    className: PropTypes.string,
+    classNameWrapper: PropTypes.string,
     completed: PropTypes.bool
 };
 

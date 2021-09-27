@@ -96,11 +96,13 @@ const Home = () => {
             </div>
 
             <div className={styles.wrapper_two}>
+                <h3>CUSTOM TODO:</h3>
                 <div className={styles.wrapper_custom_todos}>
-                    <CreateNewToDo arrToDos={homeArrToDos} />
+                    <CreateNewToDo arrToDos={homeArrToDos} className={styles.wrapper_custom_todos_wrapper} />
                 </div>
 
                 <div className={styles.wrapper_placeholder_todos}>
+                    <h3>PLACEHOLDER TODO:</h3>
                     {plTodoArr && plTodoArr.map(({completed, id, title}) => (
                         <PlaceholderToDoItem
                             key={id}

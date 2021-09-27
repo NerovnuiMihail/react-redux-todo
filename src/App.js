@@ -8,8 +8,10 @@ import RouterApp from "./router/Router-app";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <RouterApp />
+        <div className="top_wrapper_app">
+          <Navbar />
+          <RouterApp />
+        </div>
     </Router>
   );
 }
