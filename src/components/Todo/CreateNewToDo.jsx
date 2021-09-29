@@ -9,7 +9,6 @@ import styles from './Todo.module.css';
 
 
 const CreateNewToDo = ({arrToDos, handleDeleteToDo, handleChangeToDoList, className}) => {
-    console.log(className)
     return (
         <>
             { arrToDos.length === 0 && <div className={styles.whitout_todo}><h2>Задачи не созданы</h2></div> }

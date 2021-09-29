@@ -12,7 +12,7 @@
     min-width: 230px;
     padding: 10px;
     border-radius: var(--border-radius-big);
-    box-shadow: var(--box-shadow-main);
+    box-shadow: var(--box-shadow-green);
 }
 
 .table_input {
@@ -42,7 +42,7 @@
     align-items: center;
     overflow: auto;
     border-radius: var(--border-radius-big);
-    box-shadow: var(--box-shadow-main);
+    box-shadow: var(--box-shadow-green);
 }
 
 .wrapper_input {

@@ -1,10 +1,10 @@
 .postitem_wrapper {
-    min-height: 120px;
+    min-height: 100px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #1ba2eb;
-    border-radius: 15px;
+    box-shadow: var(--box-shadow-green);
+    border-radius: var(--border-radius-big);
 }
 
 .wrapper_title {
@@ -19,34 +19,43 @@
 
 .wrapper_name {
     text-transform: uppercase;
-    text-decoration: underline red;
     font-weight: bold;
 }
 
 .wrapper_text {
     margin-top: 20px;
     font-size: 20px;
+    text-align: center;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-small);
 }
 
 .post {
     margin: 10px;
     padding: 5px;
     width: 220px;
-    height: 120px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 2px solid #28d528;
+    box-shadow: var(--box-shadow-green);
+    border-radius: var(--border-radius-medium);
+}
+
+.post:hover {
+    box-shadow: var(--box-shadow-blue);
+    transition: all .5s;
+    font-weight: bold;
 }
 
 .post_number {
     font-size: 20px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .post_title {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
-    font-weight: bold;
 }

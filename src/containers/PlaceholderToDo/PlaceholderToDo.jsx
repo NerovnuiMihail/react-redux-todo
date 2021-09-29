@@ -39,8 +39,6 @@ const PlaceholderToDo = props => {
         setPage(step => step + 1);
     };
 
-    console.log(data)
-
     return (
         <>
 

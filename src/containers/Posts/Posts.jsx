@@ -6,6 +6,7 @@ import axios from "axios";
 import {BASE_URL, POST_ID_URL, ID_URL, POSTS_URL, COMMENTS_URL} from "../../api/constants";
 import PostItem from "../../components/PostItem/PostItem";
 import CommentItem from "../../components/CommentItem/CommentItem";
+import Button from "../../moduls/Button/Button";
 
 import styles from "./Posts.module.css";
 
@@ -33,7 +34,11 @@ const Posts = ({match}) => {
 
     return (
         <div className={styles.post_wrapper}>
-            <button onClick={handleGoBack}>GO BACK</button>
+            <Button
+                className={styles.post_btn}
+                onClick={handleGoBack}
+                text="Назад"
+            />
 
             {postItem && postItem.map(({id, title, body}) => (
                 <PostItem

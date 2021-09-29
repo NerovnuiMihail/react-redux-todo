@@ -6,5 +6,5 @@ import {homeReducer} from "./HomeReducer";
 export const rootReducer = combineReducers({
     todoReducer,
     modalReducer,
-    homeReducer
+    homeReducer,
 })

@@ -1,13 +1,17 @@
 :root {
     --color-gray: #d3d1d1;
     --color-main: #4339f3;
+    --color-red: #a2001a;
     --color-light-main: #dfdff5;
 
     --border-radius-small: 3px;
     --border-radius-medium: 5px;
     --border-radius-big: 8px;
 
-    --box-shadow-main: 1px 1px 8px 1px #0077ff
+    --box-shadow-blue: 1px 1px 8px 1px #0077ff;
+    --box-shadow-green: 1px 1px 8px 1px #5BFF7EFF;
+    --box-shadow-red: 1px 1px 8px 1px #a2001a;
+
 }
 
 * {

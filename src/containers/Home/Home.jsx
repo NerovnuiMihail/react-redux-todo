@@ -66,14 +66,12 @@ const Home = () => {
             <div className={styles.wrapper_one}>
 
                 <div className={styles.wrapper_users}>
-                    {users && users.map(({id, name, email, phone, username, company}) => (
-                        <Link key={id} to={`/users/${id}`}>
+                    {users && users.map(({id, name, email, phone}) => (
+                        <Link key={id} className={styles.users_link} to={`/users/${id}`}>
                             <User
                                 name={name}
                                 email={email}
-                                company={company.name}
                                 phone={phone}
-                                username={username}
                             />
                         </Link>
                     ))}
@@ -81,16 +79,18 @@ const Home = () => {
 
                 <div className={styles.pag_pos}>
                     <div onClick={handleClickDown} className={styles.btn_goback}>НАЗАД</div>
+
                     <div className={styles.post_wrapper}>
-                        {post && post.map(({id, title}) => {
-                            return <Link key={id} className={styles.post_link} to={`/post/${id}`}>
+                        {post && post.map(({id, title}) => (
+                            <Link key={id} className={styles.post_link} to={`/post/${id}`}>
                                 <PostItem
                                     id={id}
                                     title={title}
                                 />
                             </Link>
-                        })}
+                        ))}
                     </div>
+
                     <div onClick={handleClickUp} className={styles.btn_goforward}>ВПЕРЕД</div>
                 </div>
             </div>

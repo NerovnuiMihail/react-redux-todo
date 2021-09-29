@@ -30,6 +30,11 @@
     justify-content: center;
 }
 
+.users_link {
+    color: black;
+    text-decoration: none;
+}
+
 .pag_pos {
     width: 1270px;
     display: flex;
@@ -41,11 +46,16 @@
     height: 150px;
     writing-mode: vertical-lr;
     text-align: center;
-    border: 1px solid #0077ff;
     border-radius: 20px;
     font-weight: bold;
-    background-color: #58f189;
     cursor: pointer;
+    box-shadow: var(--box-shadow-green);
+    background-color: rgba(80, 235, 113, .3);
+}
+
+.btn_goback {
+    box-shadow: var(--box-shadow-blue);
+    background-color: rgba(82, 138, 250, 0.3);
 }
 
 .post_wrapper {
